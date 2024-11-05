@@ -1,0 +1,1 @@
+# generateur_texte_d-mage_beta
