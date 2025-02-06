@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 fichier = input("Entrer le nom e votre fichier.csv:\n")
 
 print("Voici la taille du jeu de donnée:", len(fichier))  
-filepath = fichier # Remplacez par le chemin de votre fichier
+filepath = fichier
 with open(filepath, encoding='utf-8') as f:
     french_text = f.read()
 
@@ -45,17 +45,6 @@ test_set = to_dataset(encoded[1_060_000:], length=length)
 tf.random.set_seed(42)  # extra code – ensures reproducibility on CPU
 model = tf.keras.Sequential([
     tf.keras.layers.Embedding(input_dim=n_tokens, output_dim=32),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
     tf.keras.layers.GRU(256, return_sequences=True),
     tf.keras.layers.GRU(256, return_sequences=True),
     tf.keras.layers.GRU(256, return_sequences=True),
