@@ -65,7 +65,7 @@ model_ckpt = tf.keras.callbacks.ModelCheckpoint("my_french_model.keras", monitor
 history = model.fit(train_set, validation_data=valid_set, epochs=10, callbacks=[model_ckpt])
 
 # Sauvegarder le modèle
-model.save('mon_modele.')
+model.save('mon_modele.keras')
 
 # Télécharger le fichier du modèle
 #from google.colab import files
