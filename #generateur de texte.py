@@ -53,11 +53,6 @@ model = tf.keras.Sequential([
     tf.keras.layers.GRU(256, return_sequences=True),
     tf.keras.layers.GRU(256, return_sequences=True),
     tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
-    tf.keras.layers.GRU(256, return_sequences=True),
     tf.keras.layers.Dense(n_tokens, activation="softmax")
 ])
 model.compile(loss="sparse_categorical_crossentropy", optimizer="nadam", metrics=["accuracy"])
